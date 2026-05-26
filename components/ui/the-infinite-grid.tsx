@@ -9,8 +9,10 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { ArrowUpRight, Sparkles, TrendingUp, Package } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 export const HeroGrid = () => {
+  const { t } = useI18n();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -30,6 +32,9 @@ export const HeroGrid = () => {
 
   const maskImage = useMotionTemplate`radial-gradient(360px circle at ${mouseX}px ${mouseY}px, black, transparent)`;
 
+  const ANCHOR_ICONS = [Sparkles, TrendingUp, Package];
+  const ANCHOR_COLORS = ["#C9974C", "#1B6CA8", "#E8762C"];
+
   return (
     <div
       onMouseMove={handleMouseMove}
@@ -38,13 +43,13 @@ export const HeroGrid = () => {
       )}
     >
       {/* Base subtle grid */}
-      <div className="absolute inset-0 z-0 opacity-[0.18]">
+      <div className="absolute inset-0 z-0 opacity-[0.12] dark:opacity-[0.08]">
         <GridPattern offsetX={gridOffsetX} offsetY={gridOffsetY} />
       </div>
 
       {/* Cursor-revealed grid */}
       <motion.div
-        className="absolute inset-0 z-0 opacity-90"
+        className="absolute inset-0 z-0 opacity-90 dark:opacity-60"
         style={{ maskImage, WebkitMaskImage: maskImage }}
       >
         <GridPattern offsetX={gridOffsetX} offsetY={gridOffsetY} />
@@ -52,44 +57,41 @@ export const HeroGrid = () => {
 
       {/* Ambient brand glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute right-[-15%] top-[-15%] w-[50%] h-[50%] rounded-full bg-[#1B6CA8]/15 blur-[140px]" />
+        <div className="absolute right-[-15%] top-[-15%] w-[50%] h-[50%] rounded-full bg-[#1B6CA8]/12 blur-[140px]" />
         <div className="absolute right-[20%] top-[5%] w-[20%] h-[20%] rounded-full bg-[#C9974C]/15 blur-[100px]" />
         <div className="absolute left-[-15%] bottom-[-20%] w-[45%] h-[45%] rounded-full bg-[#E8762C]/10 blur-[140px]" />
         <div className="absolute left-[15%] bottom-[10%] w-[18%] h-[18%] rounded-full bg-[#1B6CA8]/10 blur-[120px]" />
       </div>
 
-      {/* Content grid: 2 columns on lg+ */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
+      {/* Content grid */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
         {/* LEFT: Copy */}
         <div className="text-left max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-card/60 backdrop-blur-sm mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-card/70 backdrop-blur-sm mb-6"
           >
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#E8762C] animate-pulse" />
-            <span className="eyebrow !mb-0">
-              The eCommerce Operating Foundation
-            </span>
+            <span className="eyebrow !mb-0">{t.hero.eyebrow}</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-6">
-            Stop Duct-Taping
+            {t.hero.h1}
             <br />
-            Your Marketplace
+            {t.hero.h2}
             <br />
             <span className="text-[#1B6CA8] italic font-normal">
-              Strategy Together.
+              {t.hero.h3}
             </span>
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed mb-8">
-            One integrated operating model that replaces your patchwork of
-            agencies, 3PLs, and consultants —{" "}
+            {t.hero.sub}{" "}
             <span className="text-foreground font-medium">
-              30 years of CPG expertise
-            </span>{" "}
-            powered by AI to grow your brand on Amazon and beyond.
+              {t.hero.subStrong}
+            </span>
+            {t.hero.subTail}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
@@ -97,35 +99,35 @@ export const HeroGrid = () => {
               href="#contact"
               className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-foreground text-background font-medium rounded-md hover:bg-foreground/90 transition-all text-sm shadow-lg shadow-foreground/10"
             >
-              Book a strategy call
+              {t.hero.ctaPrimary}
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-transparent text-foreground font-medium rounded-md hover:bg-foreground/5 transition-all text-sm border border-border"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-transparent text-foreground font-medium rounded-md hover:bg-secondary transition-all text-sm border border-border"
             >
-              Explore the system
+              {t.hero.ctaSecondary}
             </a>
           </div>
 
-          {/* Micro-trust row */}
+          {/* Visual anchors */}
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
-            <div className="flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#C9974C]" />
-              AI-powered intelligence
-            </div>
-            <div className="flex items-center gap-1.5">
-              <TrendingUp className="w-3.5 h-3.5 text-[#1B6CA8]" />
-              Profit-first modeling
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Package className="w-3.5 h-3.5 text-[#E8762C]" />
-              End-to-end fulfillment
-            </div>
+            {t.hero.anchors.map((a, i) => {
+              const Icon = ANCHOR_ICONS[i];
+              return (
+                <div key={a} className="flex items-center gap-1.5">
+                  <Icon
+                    className="w-3.5 h-3.5"
+                    style={{ color: ANCHOR_COLORS[i] }}
+                  />
+                  {a}
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* RIGHT: Image collage */}
+        {/* RIGHT: Collage with live ticker */}
         <HeroCollage />
       </div>
     </div>
@@ -133,9 +135,10 @@ export const HeroGrid = () => {
 };
 
 const HeroCollage = () => {
+  const { t } = useI18n();
   return (
     <div className="relative hidden lg:block h-[560px]">
-      {/* Big back card — warehouse / packaging */}
+      {/* Big back card — shampoo / FMCG product */}
       <motion.div
         initial={{ opacity: 0, x: 20, rotate: 5 }}
         animate={{ opacity: 1, x: 0, rotate: 3 }}
@@ -144,53 +147,56 @@ const HeroCollage = () => {
         style={{ transform: "rotate(3deg)" }}
       >
         <img
-          src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1200&auto=format&fit=crop"
-          alt="CPG products arranged"
+          src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop"
+          alt="Personal care products"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-tr from-[#0A2540]/30 via-transparent to-transparent" />
       </motion.div>
 
-      {/* Floating analytics card */}
+      {/* Live data ticker / analytics card */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.25 }}
-        className="absolute left-0 top-0 w-[64%] bg-card rounded-2xl shadow-2xl border border-border p-5 z-20"
+        className="absolute left-0 top-0 w-[66%] bg-card rounded-2xl shadow-2xl border border-border p-5 z-20"
       >
         <div className="flex items-center justify-between mb-3">
-          <div className="text-xs text-muted-foreground">Amazon · 30d</div>
-          <div className="text-[10px] px-2 py-0.5 rounded-full bg-[#1B6CA8]/10 text-[#1B6CA8] font-medium">
+          <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+            {t.hero.ticker.category}
+          </div>
+          <div className="text-[10px] px-2 py-0.5 rounded-full bg-[#1B6CA8]/10 text-[#1B6CA8] font-medium flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1B6CA8] animate-pulse" />
             LIVE
           </div>
         </div>
         <div className="font-display text-3xl font-bold text-foreground mb-1">
-          +148%
+          {t.hero.ticker.revenue}
         </div>
-        <div className="text-xs text-muted-foreground mb-4">
-          Revenue lift vs. prior 30d
+        <div className="text-xs text-muted-foreground mb-3">
+          {t.hero.ticker.roas} · {t.hero.ticker.status}
         </div>
         <Sparkline />
       </motion.div>
 
-      {/* Floating package card */}
+      {/* Floating product card — soap/hand wash */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="absolute left-6 bottom-4 w-[58%] rounded-2xl overflow-hidden shadow-2xl border border-border z-10"
+        className="absolute left-6 bottom-4 w-[58%] rounded-2xl overflow-hidden shadow-2xl border border-border z-10 bg-card"
       >
         <img
-          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop"
-          alt="Premium packaging"
+          src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=1200&auto=format&fit=crop"
+          alt="Hand wash"
           className="w-full h-44 object-cover"
         />
-        <div className="p-4 bg-card">
+        <div className="p-4">
           <div className="text-[10px] uppercase tracking-widest text-[#C9974C] mb-1">
             Launch ready
           </div>
           <div className="text-sm font-medium text-foreground">
-            eCommerce Packaging Design
+            Personal Care · Hand Wash
           </div>
         </div>
       </motion.div>
@@ -208,7 +214,7 @@ const HeroCollage = () => {
         <div className="font-display text-2xl font-bold">5.8×</div>
       </motion.div>
 
-      {/* Tiny floating gold dot */}
+      {/* Floating gold dot */}
       <motion.div
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -262,7 +268,7 @@ const GridPattern = ({
             fill="none"
             stroke="currentColor"
             strokeWidth="1"
-            className="text-[#0A2540]"
+            className="text-[#0A2540] dark:text-[#4A8BC2]"
           />
         </motion.pattern>
       </defs>

@@ -1,15 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "#contact" },
-];
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
+import { ThemeToggle, LanguageToggle } from "./toggles";
 
 export function Navbar() {
+  const { t } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -19,20 +16,27 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const links = [
+    { label: t.nav.services, href: "/#services" },
+    { label: t.nav.about, href: "/about" },
+    { label: t.nav.caseStudies, href: "/case-studies" },
+    { label: t.nav.contact, href: "/#contact" },
+  ];
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/85 backdrop-blur-md border-b border-border"
+          ? "bg-background/90 backdrop-blur-md border-b border-border"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2.5">
           <FoundtitionMark className="w-7 h-7" />
           <span
-            className="font-display text-foreground tracking-tight text-lg"
+            className="font-display text-foreground text-lg"
             style={{ letterSpacing: "0.04em" }}
           >
             FOUNDITION
@@ -40,8 +44,8 @@ export function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+        <nav className="hidden lg:flex items-center gap-8">
+          {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -52,8 +56,10 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Right cluster */}
+        <div className="hidden lg:flex items-center gap-3">
+          <LanguageToggle />
+          <ThemeToggle />
           <a
             href="tel:+16476186488"
             className="text-xs text-muted-foreground hover:text-foreground transition-colors font-mono"
@@ -61,26 +67,32 @@ export function Navbar() {
             +1 (647) 618-6488
           </a>
           <a
-            href="#contact"
-            className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-all"
+            href="/#contact"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-foreground text-background text-xs font-medium rounded-md hover:bg-foreground/90 transition-all"
           >
-            Book a call
+            {t.nav.ctaShort}
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-muted-foreground hover:text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile cluster */}
+        <div className="flex lg:hidden items-center gap-2">
+          <LanguageToggle />
+          <ThemeToggle />
+          <button
+            className="text-muted-foreground hover:text-foreground"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border px-6 py-4 flex flex-col gap-4">
-          {navLinks.map((link) => (
+        <div className="lg:hidden bg-background/95 backdrop-blur-md border-b border-border px-6 py-4 flex flex-col gap-3">
+          {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -91,10 +103,10 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
-            className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md text-center"
+            href="/#contact"
+            className="mt-2 px-4 py-2.5 bg-foreground text-background text-sm font-medium rounded-md text-center"
           >
-            Book a call
+            {t.nav.ctaLong}
           </a>
         </div>
       )}
