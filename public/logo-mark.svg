@@ -1,0 +1,5 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Stylized F: vertical stem + top bar, with orange accent square in the middle bar -->
+  <path d="M22 18 L78 18 L78 36 L40 36 L40 48 L62 48 L62 64 L40 64 L40 86 L22 86 Z" fill="white"/>
+  <rect x="52" y="48" width="14" height="16" fill="#E8762C"/>
+</svg>
