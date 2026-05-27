@@ -31,11 +31,11 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2.5">
+        <a href="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0">
           <FoundtitionMark className="w-7 h-7" />
-          <span className="font-brand text-foreground text-xl leading-none">
+          <span className="font-brand text-foreground text-lg sm:text-xl leading-none">
             Foundition
           </span>
         </a>
@@ -73,7 +73,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile cluster */}
-        <div className="flex lg:hidden items-center gap-2">
+        <div className="flex lg:hidden items-center gap-1.5 sm:gap-2">
           <LanguageToggle />
           <ThemeToggle />
           <button

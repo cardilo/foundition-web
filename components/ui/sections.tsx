@@ -33,15 +33,15 @@ export function BrandStrip() {
   ];
   return (
     <section className="border-y border-border bg-secondary/40">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 py-10 md:py-12">
         <p className="text-[11px] uppercase tracking-widest text-muted-foreground text-center mb-8">
           {t.logos.label}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-10 gap-y-4">
           {brands.map((b) => (
             <span
               key={b.name}
-              className={`text-xl md:text-2xl text-muted-foreground/70 hover:text-foreground transition-colors ${b.style}`}
+              className={`text-lg sm:text-xl md:text-2xl text-muted-foreground/70 hover:text-foreground transition-colors ${b.style}`}
               style={{ fontFamily: "var(--font-playfair), serif" }}
             >
               {b.name}
@@ -60,10 +60,10 @@ export function BrandStrip() {
 export function Outcomes() {
   const { t } = useI18n();
   return (
-    <section className="max-w-6xl mx-auto px-6 py-24 border-b border-border">
+    <section className="max-w-6xl mx-auto px-5 sm:px-6 py-16 md:py-24 border-b border-border">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="relative">
-          <div className="relative rounded-2xl overflow-hidden border border-border shadow-xl aspect-[4/5]">
+          <div className="relative rounded-2xl overflow-hidden border border-border shadow-xl aspect-[4/3] md:aspect-[4/5]">
             <img
               src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=1400&auto=format&fit=crop"
               alt="Modern enterprise infrastructure"
@@ -71,7 +71,7 @@ export function Outcomes() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 via-transparent to-transparent" />
           </div>
-          <div className="absolute -bottom-6 -right-4 md:right-8 bg-card border border-border rounded-xl shadow-2xl px-5 py-4 flex items-center gap-3">
+          <div className="absolute bottom-3 right-3 md:-bottom-6 md:right-8 bg-card border border-border rounded-xl shadow-2xl px-4 py-3 md:px-5 md:py-4 flex items-center gap-3 max-w-[calc(100%-1.5rem)]">
             <div className="w-10 h-10 rounded-full bg-[#C9974C]/15 flex items-center justify-center">
               <CheckCircle2 className="w-5 h-5 text-[#C9974C]" />
             </div>
@@ -141,7 +141,7 @@ const STEP_IMAGES = [
 export function Process() {
   const { t } = useI18n();
   return (
-    <section className="max-w-6xl mx-auto px-6 py-24 border-b border-border">
+    <section className="max-w-6xl mx-auto px-5 sm:px-6 py-16 md:py-24 border-b border-border">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
           <div className="eyebrow mb-4">{t.process.eyebrow}</div>
@@ -204,9 +204,9 @@ export function Testimonial() {
   const { t } = useI18n();
   return (
     <section className="border-b border-border bg-secondary/30">
-      <div className="max-w-5xl mx-auto px-6 py-24">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 items-center">
-          <div className="relative">
+          <div className="relative max-w-[280px] md:max-w-none mx-auto md:mx-0">
             <div className="aspect-square rounded-2xl overflow-hidden border border-border shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
@@ -274,11 +274,11 @@ export function StickyCTA() {
           : "translate-y-10 opacity-0 pointer-events-none"
       }`}
     >
-      <div className="bg-foreground text-background rounded-full shadow-2xl pl-5 pr-1 py-1 flex items-center gap-4 border border-foreground/10">
+      <div className="bg-foreground text-background rounded-full shadow-2xl pl-2 pr-1 py-1 sm:pl-5 flex items-center gap-2 sm:gap-4 border border-foreground/10 max-w-[calc(100vw-1.5rem)]">
         <span className="text-sm hidden sm:inline">{t.stickyCta.text}</span>
         <a
           href="#contact"
-          className="inline-flex items-center gap-1.5 bg-background text-foreground px-4 py-2.5 rounded-full text-sm font-medium hover:bg-background/90 transition-colors"
+          className="inline-flex items-center gap-1.5 bg-background text-foreground px-4 py-2.5 rounded-full text-sm font-medium hover:bg-background/90 transition-colors whitespace-nowrap"
         >
           {t.stickyCta.cta}
           <ArrowUpRight className="w-3.5 h-3.5" />
@@ -295,7 +295,7 @@ export function StickyCTA() {
 export function DiagnosticCTA() {
   const { t } = useI18n();
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12">
+    <section className="max-w-6xl mx-auto px-5 sm:px-6 py-12">
       <div className="relative rounded-2xl overflow-hidden border border-border">
         <img
           src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop"
@@ -303,7 +303,7 @@ export function DiagnosticCTA() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/85 to-foreground/40" />
-        <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="relative p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="text-background max-w-xl">
             <div className="text-xs uppercase tracking-widest text-[#C9974C] mb-2">
               {t.diagnostic.eyebrow}
@@ -317,7 +317,7 @@ export function DiagnosticCTA() {
           </div>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-background text-foreground px-6 py-3.5 rounded-md font-medium hover:bg-background/90 transition-all whitespace-nowrap shadow-lg"
+            className="inline-flex items-center justify-center gap-2 bg-background text-foreground px-6 py-3.5 rounded-md font-medium hover:bg-background/90 transition-all shadow-lg text-sm w-full md:w-auto md:whitespace-nowrap"
           >
             {t.diagnostic.cta}
             <ArrowUpRight className="w-4 h-4" />
@@ -359,7 +359,7 @@ const SERVICE_ICONS = [
 export function ServicesGrid() {
   const { t } = useI18n();
   return (
-    <section id="services" className="max-w-6xl mx-auto px-6 py-24 border-b border-border">
+    <section id="services" className="max-w-6xl mx-auto px-5 sm:px-6 py-16 md:py-24 border-b border-border">
       <div className="max-w-3xl mb-12">
         <div className="eyebrow mb-4">{t.services.eyebrow}</div>
         <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight mb-4">

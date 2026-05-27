@@ -38,7 +38,7 @@ export default function Home() {
 
       {/* PROBLEM */}
       <section className="border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="eyebrow mb-4">{t.problem.eyebrow}</div>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight leading-tight mb-6">
@@ -88,7 +88,7 @@ export default function Home() {
               </div>
             </div>
             {/* Floating consolidation stat */}
-            <div className="absolute -bottom-5 -left-5 bg-card border border-border rounded-xl shadow-2xl px-5 py-4">
+            <div className="absolute bottom-3 left-3 md:-bottom-5 md:-left-5 bg-card border border-border rounded-xl shadow-2xl px-4 py-3 md:px-5 md:py-4">
               <div className="font-display text-2xl font-bold text-foreground">
                 {t.problem.stat}
               </div>
@@ -113,7 +113,7 @@ export default function Home() {
       <Process />
 
       {/* DIFFERENTIATORS */}
-      <section className="max-w-6xl mx-auto px-6 py-24 border-b border-border">
+      <section className="max-w-6xl mx-auto px-5 sm:px-6 py-16 md:py-24 border-b border-border">
         <div className="eyebrow mb-4">{t.diff.eyebrow}</div>
         <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight mb-12">
           {t.diff.headline}
@@ -150,7 +150,7 @@ export default function Home() {
 
       {/* CLOSING STATS */}
       <section className="border-b border-border bg-secondary/20">
-        <div className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:divide-x divide-border">
+        <div className="max-w-5xl mx-auto px-5 sm:px-6 py-12 md:py-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:divide-x divide-border">
           {t.closing.stats.map((l, i) => (
             <div
               key={l.num}
@@ -170,9 +170,9 @@ export default function Home() {
       {/* FINAL CTA */}
       <section
         id="contact"
-        className="max-w-6xl mx-auto px-6 py-28 text-center"
+        className="max-w-6xl mx-auto px-5 sm:px-6 py-20 md:py-28 text-center"
       >
-        <div className="rounded-2xl border border-border bg-secondary/40 p-12 md:p-20 relative overflow-hidden">
+        <div className="rounded-2xl border border-border bg-secondary/40 p-8 md:p-20 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute right-[-10%] top-[-20%] w-[40%] h-[40%] rounded-full bg-primary/15 blur-[120px]" />
             <div className="absolute left-[-10%] bottom-[-20%] w-[40%] h-[40%] rounded-full bg-[#C9974C]/15 blur-[120px]" />
@@ -213,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border px-6 py-10">
+      <footer className="border-t border-border px-5 sm:px-6 py-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="flex items-center gap-2.5">
             <FoundtitionMark className="w-6 h-6" />

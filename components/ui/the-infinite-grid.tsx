@@ -64,20 +64,20 @@ export const HeroGrid = () => {
       </div>
 
       {/* Content grid */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
         {/* LEFT: Copy */}
         <div className="text-left max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-card/70 backdrop-blur-sm mb-6"
+            className="inline-flex items-start gap-2 px-3 py-1.5 rounded-full border border-border bg-card/70 backdrop-blur-sm mb-6 max-w-full"
           >
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#E8762C] animate-pulse" />
-            <span className="eyebrow !mb-0">{t.hero.eyebrow}</span>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#E8762C] animate-pulse shrink-0 mt-1" />
+            <span className="eyebrow !mb-0 leading-snug">{t.hero.eyebrow}</span>
           </motion.div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-6">
+          <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-6 break-words">
             {t.hero.h1}
             <br />
             {t.hero.h2}

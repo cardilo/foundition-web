@@ -200,8 +200,8 @@ export default function AboutPage() {
         </section>
       </div>
 
-      <footer className="border-t border-border px-6 py-10">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer className="border-t border-border px-5 sm:px-6 py-10">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <div className="flex items-center gap-2.5">
             <FoundtitionMark className="w-6 h-6" />
             <span className="font-brand text-foreground text-base">
