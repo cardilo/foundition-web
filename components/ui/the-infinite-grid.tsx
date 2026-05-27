@@ -187,8 +187,8 @@ const HeroCollage = () => {
         className="absolute left-6 bottom-4 w-[58%] rounded-2xl overflow-hidden shadow-2xl border border-border z-10 bg-card"
       >
         <img
-          src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=1200&auto=format&fit=crop"
-          alt="Hand wash"
+          src="https://images.unsplash.com/photo-1585751119414-ef2636f8aede?q=80&w=1200&auto=format&fit=crop"
+          alt="Personal care product line"
           className="w-full h-44 object-cover"
         />
         <div className="p-4">
@@ -196,7 +196,7 @@ const HeroCollage = () => {
             Launch ready
           </div>
           <div className="text-sm font-medium text-foreground">
-            Personal Care · Hand Wash
+            Personal Care · Premium Line
           </div>
         </div>
       </motion.div>

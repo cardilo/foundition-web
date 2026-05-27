@@ -35,11 +35,8 @@ export function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2.5">
           <FoundtitionMark className="w-7 h-7" />
-          <span
-            className="font-display text-foreground text-lg"
-            style={{ letterSpacing: "0.04em" }}
-          >
-            FOUNDITION
+          <span className="font-brand text-foreground text-xl leading-none">
+            Foundition
           </span>
         </a>
 

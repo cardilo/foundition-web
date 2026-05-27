@@ -204,11 +204,8 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
             <FoundtitionMark className="w-6 h-6" />
-            <span
-              className="font-display text-foreground text-sm"
-              style={{ letterSpacing: "0.04em" }}
-            >
-              FOUNDITION
+            <span className="font-brand text-foreground text-base">
+              Foundition
             </span>
           </div>
           <p className="text-muted-foreground text-xs text-center">

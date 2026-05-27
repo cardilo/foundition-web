@@ -16,7 +16,7 @@ const COPY = {
         title: "From shelf-bound legacy brand to top-3 Amazon ranking",
         metrics: "+148% revenue · 5.8× ROAS · −32% CPFO",
         image:
-          "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=1200&auto=format&fit=crop",
         timeline: "6 months",
       },
       {
@@ -32,7 +32,7 @@ const COPY = {
         title: "Bundle architecture that doubled basket size",
         metrics: "+89% AOV · +210% subscribe-and-save",
         image:
-          "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop",
         timeline: "3 months",
       },
       {
@@ -40,7 +40,7 @@ const COPY = {
         title: "Launching a D2C-native brand into Amazon at scale",
         metrics: "$2.4M Y1 revenue · category top-10 within 90 days",
         image:
-          "https://images.unsplash.com/photo-1607006677018-83b3bff9b95d?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1601612628452-9e99ced43524?q=80&w=1200&auto=format&fit=crop",
         timeline: "12 months",
       },
     ],
@@ -56,7 +56,7 @@ const COPY = {
         title: "D'une marque traditionnelle au top-3 du classement Amazon",
         metrics: "+148% de revenu · ROAS 5,8× · −32% CPFO",
         image:
-          "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=1200&auto=format&fit=crop",
         timeline: "6 mois",
       },
       {
@@ -72,7 +72,7 @@ const COPY = {
         title: "Architecture de bundles doublant le panier moyen",
         metrics: "+89% AOV · +210% abonnements",
         image:
-          "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop",
         timeline: "3 mois",
       },
       {
@@ -80,7 +80,7 @@ const COPY = {
         title: "Lancer une marque D2C native sur Amazon à grande échelle",
         metrics: "2,4 M$ rev. An 1 · top-10 catégorie en 90 jours",
         image:
-          "https://images.unsplash.com/photo-1607006677018-83b3bff9b95d?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1601612628452-9e99ced43524?q=80&w=1200&auto=format&fit=crop",
         timeline: "12 mois",
       },
     ],
@@ -166,11 +166,8 @@ export default function CaseStudiesPage() {
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
             <FoundtitionMark className="w-6 h-6" />
-            <span
-              className="font-display text-foreground text-sm"
-              style={{ letterSpacing: "0.04em" }}
-            >
-              FOUNDITION
+            <span className="font-brand text-foreground text-base">
+              Foundition
             </span>
           </div>
           <p className="text-muted-foreground text-xs">

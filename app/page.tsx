@@ -62,23 +62,23 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-2xl overflow-hidden border border-border aspect-[3/4]">
                 <img
-                  src="https://images.unsplash.com/photo-1607006677018-83b3bff9b95d?q=80&w=800&auto=format&fit=crop"
-                  alt="Soap bars production"
+                  src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=800&auto=format&fit=crop"
+                  alt="Premium personal care arrangement"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="space-y-3">
                 <div className="rounded-2xl overflow-hidden border border-border aspect-square">
                   <img
-                    src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop"
-                    alt="Beauty FMCG"
+                    src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?q=80&w=800&auto=format&fit=crop"
+                    alt="Luxury skincare"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-border aspect-square">
                   <img
-                    src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=800&auto=format&fit=crop"
-                    alt="Hand wash"
+                    src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=800&auto=format&fit=crop"
+                    alt="Personal care product lineup"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -219,11 +219,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="flex items-center gap-2.5">
             <FoundtitionMark className="w-6 h-6" />
-            <span
-              className="font-display text-foreground text-sm"
-              style={{ letterSpacing: "0.04em" }}
-            >
-              FOUNDITION
+            <span className="font-brand text-foreground text-base">
+              Foundition
             </span>
           </div>
           <p className="text-muted-foreground text-xs text-center">

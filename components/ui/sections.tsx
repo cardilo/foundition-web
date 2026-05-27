@@ -65,8 +65,8 @@ export function Outcomes() {
         <div className="relative">
           <div className="relative rounded-2xl overflow-hidden border border-border shadow-xl aspect-[4/5]">
             <img
-              src="https://images.unsplash.com/photo-1585751119414-ef2636f8aede?q=80&w=1400&auto=format&fit=crop"
-              alt="FMCG personal care product lineup"
+              src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=1400&auto=format&fit=crop"
+              alt="Operational logistics infrastructure"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 via-transparent to-transparent" />
@@ -128,10 +128,14 @@ export function Outcomes() {
 
 const STEP_ICONS = [Search, Cog, Rocket, LineChart];
 const STEP_IMAGES = [
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+  // 01 Diagnose — laptop close, analytics
+  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
+  // 02 Architect — boardroom planning
+  "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
+  // 03 Execute — team meeting
   "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+  // 04 Compound — logistics warehouse aerial
+  "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=1200&auto=format&fit=crop",
 ];
 
 export function Process() {
@@ -329,12 +333,18 @@ export function DiagnosticCTA() {
    ───────────────────────────────────────────────────────────── */
 
 const SERVICE_IMAGES = [
-  "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop", // warehouse
-  "https://images.unsplash.com/photo-1607006677018-83b3bff9b95d?q=80&w=1200&auto=format&fit=crop", // soap bars
-  "https://images.unsplash.com/photo-1556228841-a3c527ebefe5?q=80&w=1200&auto=format&fit=crop", // products lineup
-  "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=1200&auto=format&fit=crop", // beauty creative
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", // data
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop", // analytics
+  // 01 Fulfillment — warehouse interior
+  "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop",
+  // 02 Packaging — packaging / boxes
+  "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop",
+  // 03 Brand Governance — modern office
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+  // 04 Brand Acceleration — creative workspace
+  "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1200&auto=format&fit=crop",
+  // 05 Advertising — analytics screen
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+  // 06 Analytics — workspace dashboard
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
 ];
 
 const SERVICE_ICONS = [

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, Geist_Mono } from "next/font/google";
+import {
+  Playfair_Display,
+  DM_Sans,
+  Geist_Mono,
+  Bricolage_Grotesque,
+} from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
@@ -21,6 +26,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-brand",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+});
+
 export const metadata: Metadata = {
   title:
     "Foundition — The eCommerce Operating Layer for Enterprise CPG",
@@ -37,7 +48,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${playfair.variable} ${dmSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${playfair.variable} ${dmSans.variable} ${geistMono.variable} ${bricolage.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
