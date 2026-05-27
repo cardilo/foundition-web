@@ -8,7 +8,15 @@ import {
   useMotionTemplate,
   useAnimationFrame,
 } from "framer-motion";
-import { ArrowUpRight, Sparkles, TrendingUp, Package } from "lucide-react";
+import {
+  ArrowUpRight,
+  Sparkles,
+  TrendingUp,
+  Package,
+  Users,
+  ShieldCheck,
+  ScaleIcon,
+} from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 export const HeroGrid = () => {
@@ -86,13 +94,28 @@ export const HeroGrid = () => {
               {t.hero.h3}
             </span>
           </h1>
-          <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed mb-8">
-            {t.hero.sub}{" "}
-            <span className="text-foreground font-medium">
-              {t.hero.subStrong}
-            </span>
-            {t.hero.subTail}
+          <p className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed mb-6">
+            {t.hero.sub}
           </p>
+
+          <ul className="space-y-2.5 mb-8 max-w-lg">
+            {t.hero.bullets.map((b, i) => {
+              const Icon = [Users, ShieldCheck, ScaleIcon][i] ?? Users;
+              return (
+                <li key={b.title} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 mt-1 w-5 h-5 rounded-md bg-[#1B6CA8]/12 flex items-center justify-center">
+                    <Icon className="w-3 h-3 text-[#1B6CA8]" />
+                  </span>
+                  <span className="text-sm md:text-base leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-foreground">
+                      {b.title}
+                    </span>{" "}
+                    {b.body}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <a

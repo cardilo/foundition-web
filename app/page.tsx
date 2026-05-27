@@ -11,6 +11,7 @@ import {
   DiagnosticCTA,
   ServicesGrid,
 } from "@/components/ui/sections";
+import { ProblemDiagram } from "@/components/ui/problem-diagram";
 import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
@@ -97,6 +98,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Before / After diagram */}
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 pb-16 md:pb-24">
+          <ProblemDiagram />
         </div>
       </section>
 

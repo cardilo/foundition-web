@@ -23,25 +23,26 @@ import { useI18n } from "@/lib/i18n";
 
 export function BrandStrip() {
   const { t } = useI18n();
+  // Stylized typographic treatments — drop in licensed SVG partner logos later.
   const brands = [
     { name: "Unilever", style: "italic font-semibold tracking-tight" },
     { name: "P&G", style: "font-bold tracking-tighter" },
     { name: "MANSCAPED", style: "font-bold tracking-[0.18em] text-sm" },
-    { name: "Colgate", style: "font-semibold tracking-tight" },
+    { name: "Colgate", style: "italic font-semibold tracking-tight" },
     { name: "Henkel", style: "font-bold tracking-wider uppercase text-sm" },
     { name: "Church & Dwight", style: "font-medium tracking-tight" },
   ];
   return (
     <section className="border-y border-border bg-secondary/40">
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 py-10 md:py-12">
-        <p className="text-[11px] uppercase tracking-widest text-muted-foreground text-center mb-8">
-          {t.logos.label}
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 py-12 md:py-14">
+        <p className="text-[11px] sm:text-xs uppercase tracking-widest text-muted-foreground text-center mb-8 max-w-xl mx-auto leading-relaxed">
+          {t.logos.tagline}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-10 gap-y-4">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-12 gap-y-5 grayscale opacity-80">
           {brands.map((b) => (
             <span
               key={b.name}
-              className={`text-lg sm:text-xl md:text-2xl text-muted-foreground/70 hover:text-foreground transition-colors ${b.style}`}
+              className={`text-lg sm:text-xl md:text-2xl text-muted-foreground hover:text-foreground transition-colors ${b.style}`}
               style={{ fontFamily: "var(--font-playfair), serif" }}
             >
               {b.name}
@@ -142,12 +143,15 @@ export function Process() {
   const { t } = useI18n();
   return (
     <section className="max-w-6xl mx-auto px-5 sm:px-6 py-16 md:py-24 border-b border-border">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div>
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-14">
+        <div className="max-w-2xl">
           <div className="eyebrow mb-4">{t.process.eyebrow}</div>
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight max-w-2xl">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight mb-3">
             {t.process.headline}
           </h2>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            {t.process.sub}
+          </p>
         </div>
         <a
           href="#contact"
@@ -158,36 +162,50 @@ export function Process() {
         </a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* Timeline rail (desktop only) */}
+      <div className="hidden lg:block relative mb-6">
+        <div className="absolute left-0 right-0 top-1/2 h-px bg-border" />
+        <div
+          className="absolute left-0 top-1/2 h-px bg-gradient-to-r from-[#1B6CA8] via-[#C9974C] to-[#E8762C]"
+          style={{ width: "100%" }}
+        />
+        <div className="relative grid grid-cols-4">
+          {t.process.steps.map((s, i) => (
+            <div
+              key={s.num}
+              className="flex items-center justify-center"
+            >
+              <div className="w-4 h-4 rounded-full bg-background border-2 border-[#1B6CA8] shadow-sm relative z-10" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-3">
         {t.process.steps.map((s, i) => {
           const Icon = STEP_ICONS[i];
           return (
             <div
               key={s.num}
-              className="group relative rounded-2xl overflow-hidden border border-border bg-card hover:border-[#1B6CA8]/40 transition-all hover:-translate-y-1 duration-300"
+              className="group relative rounded-xl border border-border bg-card hover:border-[#1B6CA8]/40 hover:-translate-y-1 transition-all duration-300 p-5"
             >
-              <div className="relative h-44 overflow-hidden">
-                <img
-                  src={STEP_IMAGES[i]}
-                  alt={s.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-                <div className="absolute top-3 left-3 w-9 h-9 rounded-lg bg-card/95 backdrop-blur flex items-center justify-center border border-border">
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-lg bg-[#1B6CA8]/8 flex items-center justify-center">
                   <Icon className="w-4 h-4 text-[#1B6CA8]" />
                 </div>
-                <div className="absolute top-3 right-3 font-display text-xs font-bold text-foreground bg-card/90 backdrop-blur px-2 py-1 rounded">
-                  {s.num}
+                <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground bg-secondary/60 px-2.5 py-1 rounded-full border border-border">
+                  {s.duration}
                 </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-display text-lg font-bold text-foreground mb-2">
-                  {s.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {s.body}
-                </p>
+              <div className="font-display text-xs font-bold text-[#C9974C] mb-1">
+                {s.num}
               </div>
+              <h3 className="font-display text-lg font-bold text-foreground mb-2 leading-snug">
+                {s.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {s.body}
+              </p>
             </div>
           );
         })}
@@ -396,7 +414,10 @@ export function ServicesGrid() {
                   {s.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {s.desc}
+                  <span className="font-semibold text-foreground">
+                    {s.lede}
+                  </span>{" "}
+                  {s.body}
                 </p>
               </div>
             </div>

@@ -25,10 +25,21 @@ export const content = {
       h1: "Consolidate Your",
       h2: "Marketplace",
       h3: "Infrastructure.",
-      sub: "One integrated operating model replacing the patchwork of fragmented agencies, siloed 3PLs, and disconnected consultants.",
-      subStrong: "30 years of CPG domain expertise",
-      subTail:
-        " supercharged by AI to scale your brand on Amazon and beyond.",
+      sub: "Stop managing fragmented agencies, siloed 3PLs, and disconnected consultants. Foundition replaces them all with one operating model — 30 years of CPG expertise + predictive AI.",
+      bullets: [
+        {
+          title: "1 Unified Team",
+          body: "instead of 4+ vendors.",
+        },
+        {
+          title: "Protects Your Margins",
+          body: "across fulfillment and media spend.",
+        },
+        {
+          title: "Fully Accountable",
+          body: "for your end-to-end channel P&L.",
+        },
+      ],
       ctaPrimary: "Book a Strategy Architecture Call",
       ctaSecondary: "Explore the Operating System",
       anchors: [
@@ -44,6 +55,8 @@ export const content = {
       },
     },
     logos: {
+      tagline:
+        "Engineered by leaders with operational experience scaling brands across",
       label: "Trusted by enterprise CPG leaders to operate the channel",
     },
     problem: {
@@ -57,6 +70,23 @@ export const content = {
       stat: "4 → 1",
       statLabel: "Vendor consolidation",
       cta: "See how the system works",
+      diagram: {
+        beforeLabel: "The fragmented status quo",
+        beforeCaption:
+          "Friction, margin leaks, zero centralized accountability.",
+        afterLabel: "The Foundition Layer",
+        afterCaption:
+          "Total channel alignment under one P&L-accountable roof.",
+        brandLabel: "Your Brand",
+        marketLabel: "Marketplace",
+        silos: [
+          "3PL Warehouse",
+          "Ad Agency",
+          "Design Studio",
+          "Analytics Consultant",
+        ],
+        layerLabel: "Foundition Operating Layer",
+      },
     },
     services: {
       eyebrow: "Capabilities & Services",
@@ -64,28 +94,34 @@ export const content = {
       sub: "Every function operates within a singular data feedback loop to drive compounding channel growth — not isolated wins.",
       items: [
         {
-          title: "Fulfillment & Supply Chain Logistics",
-          desc: "Temperature-sensitive cold chain logistics, automated packaging compliance, and multi-channel inventory allocation.",
+          title: "High-Velocity Logistics",
+          lede: "Protect inventory.",
+          body: "Cold-chain readiness, automated packaging compliance, and multi-channel inventory allocation.",
         },
         {
-          title: "eCommerce Packaging & Industrial Design",
-          desc: "Marketplace-optimized packaging engineered for high-velocity conversion, low-cost fulfillment cubes, and shipping durability.",
+          title: "Conversion-Engineered Packaging",
+          lede: "Optimize the unboxing.",
+          body: "Marketplace-ready packaging for high-velocity conversion, low-cost fulfillment cubes, and shipping durability.",
         },
         {
-          title: "Omnichannel Brand Governance",
-          desc: "Total Amazon Brand Registry management, legal-grade MAP enforcement, listing defense, and regulatory compliance.",
+          title: "Legal-Grade Brand Protection",
+          lede: "Enforce MAP instantly.",
+          body: "Total Amazon Brand Registry control, listing defense, unauthorized seller monitoring, and regulatory compliance.",
         },
         {
-          title: "Brand Acceleration & Creative Assets",
-          desc: "AI-driven digital asset production, search-optimized catalog architecture, high-conversion A+ content, keyword indexing.",
+          title: "AI-Powered Brand Acceleration",
+          lede: "Win the search bar.",
+          body: "AI-driven creative assets, search-optimized catalog architecture, high-conversion A+ content, keyword indexing.",
         },
         {
-          title: "Precision Performance Advertising",
-          desc: "Data-backed capital allocation across Amazon Ads, tying ad spend directly to net contribution margin and share acquisition.",
+          title: "Margin-Optimized Ad Spend",
+          lede: "Profit, not vanity clicks.",
+          body: "Data-backed capital allocation across Amazon Ads tied directly to net contribution margin and share acquisition.",
         },
         {
-          title: "Commercial Strategy & Advanced Analytics",
-          desc: "C-suite visibility into market share, share of voice, inventory run-rates, and profitability modeling.",
+          title: "C-Suite Commercial Intelligence",
+          lede: "Boardroom-ready clarity.",
+          body: "Executive visibility into market share, share of voice, inventory run-rates, and profitability modeling.",
         },
       ],
     },
@@ -112,27 +148,32 @@ export const content = {
     process: {
       eyebrow: "The Framework",
       headline: "From Diagnostic to Compounding Scale.",
+      sub: "Days, not quarters. A structured onboarding that removes friction from day one.",
       ctaInline: "Start your audit",
       steps: [
         {
           num: "01",
           title: "Diagnose",
-          body: "A deep architectural audit of your catalog, media spend efficiency, inventory health, and category market share to build a profit-first baseline.",
+          duration: "Days 1–14",
+          body: "Deep architectural audit of your catalog, media spend, inventory health, and category share to set a profit-first baseline.",
         },
         {
           num: "02",
           title: "Architect",
-          body: "We construct your dedicated operating layer — re-aligning logistics, compliance, and advertising strategy around your margin targets.",
+          duration: "Days 15–30",
+          body: "We build your dedicated operating layer — re-aligning logistics, compliance, and advertising strategy around your margin targets.",
         },
         {
           num: "03",
           title: "Execute",
+          duration: "Days 31–60",
           body: "Simultaneous launch of optimized creative, refined search campaigns, and streamlined fulfillment under one accountable roadmap.",
         },
         {
           num: "04",
           title: "Compound",
-          body: "Continuous algorithmic optimization backed by weekly executive reporting — shifting your position from trailing to owning the category.",
+          duration: "Day 61+",
+          body: "Continuous algorithmic optimization backed by weekly executive reporting — moving from trailing to owning the category.",
         },
       ],
     },
@@ -208,10 +249,18 @@ export const content = {
       h1: "Consolidez votre",
       h2: "infrastructure",
       h3: "marketplace.",
-      sub: "Un modèle opérationnel intégré qui remplace la mosaïque d'agences fragmentées, de 3PL cloisonnés et de consultants déconnectés.",
-      subStrong: "30 ans d'expertise CPG",
-      subTail:
-        " supercharger par l'IA pour propulser votre marque sur Amazon et au-delà.",
+      sub: "Stoppez la gestion d'agences fragmentées, de 3PL cloisonnés et de consultants déconnectés. Foundition les remplace tous par un seul modèle opérationnel — 30 ans d'expertise CPG + IA prédictive.",
+      bullets: [
+        { title: "1 équipe unifiée", body: "au lieu de 4+ fournisseurs." },
+        {
+          title: "Protège vos marges",
+          body: "sur la logistique et le media spend.",
+        },
+        {
+          title: "Pleinement responsable",
+          body: "de votre P&L canal de bout en bout.",
+        },
+      ],
       ctaPrimary: "Réserver un appel d'architecture stratégique",
       ctaSecondary: "Explorer le système opérationnel",
       anchors: [
@@ -227,8 +276,9 @@ export const content = {
       },
     },
     logos: {
-      label:
-        "Adopté par les leaders CPG pour opérer le canal",
+      tagline:
+        "Conçu par des leaders avec l'expérience opérationnelle pour piloter des marques chez",
+      label: "Adopté par les leaders CPG pour opérer le canal",
     },
     problem: {
       eyebrow: "La faille systémique",
@@ -241,6 +291,17 @@ export const content = {
       stat: "4 → 1",
       statLabel: "Fournisseurs consolidés",
       cta: "Voir comment fonctionne le système",
+      diagram: {
+        beforeLabel: "Le statu quo fragmenté",
+        beforeCaption:
+          "Friction, fuites de marge, zéro responsabilité centralisée.",
+        afterLabel: "La couche Foundition",
+        afterCaption: "Alignement total du canal sous un seul P&L.",
+        brandLabel: "Votre marque",
+        marketLabel: "Marketplace",
+        silos: ["3PL", "Agence pub", "Studio design", "Consultant data"],
+        layerLabel: "Couche opérationnelle Foundition",
+      },
     },
     services: {
       eyebrow: "Capacités & services",
@@ -248,28 +309,34 @@ export const content = {
       sub: "Chaque fonction opère dans une boucle de rétroaction unique pour générer une croissance composée — pas des victoires isolées.",
       items: [
         {
-          title: "Logistique & chaîne d'approvisionnement",
-          desc: "Logistique chaîne du froid, conformité d'emballage automatisée, et allocation d'inventaire multi-canal.",
+          title: "Logistique haute vélocité",
+          lede: "Protégez votre stock.",
+          body: "Chaîne du froid, conformité d'emballage automatisée et allocation d'inventaire multi-canal.",
         },
         {
-          title: "Packaging e-commerce & design industriel",
-          desc: "Packaging optimisé pour la conversion, des cubes de fulfillment économiques et la durabilité d'expédition.",
+          title: "Packaging conçu pour la conversion",
+          lede: "Optimisez le déballage.",
+          body: "Packaging marketplace-ready pour la conversion, cubes de fulfillment économiques et durabilité d'expédition.",
         },
         {
-          title: "Gouvernance de marque omnicanale",
-          desc: "Gestion complète d'Amazon Brand Registry, application MAP, défense des fiches produits et conformité réglementaire.",
+          title: "Protection de marque légale",
+          lede: "Faites respecter le MAP.",
+          body: "Contrôle complet d'Amazon Brand Registry, défense des fiches, surveillance des vendeurs non autorisés et conformité réglementaire.",
         },
         {
-          title: "Accélération de marque & assets créatifs",
-          desc: "Production d'assets par IA, architecture catalogue SEO, contenu A+ à forte conversion et indexation par mots-clés.",
+          title: "Accélération de marque par IA",
+          lede: "Gagnez la barre de recherche.",
+          body: "Assets créatifs par IA, architecture catalogue SEO, contenu A+ à forte conversion et indexation par mots-clés.",
         },
         {
-          title: "Publicité performance de précision",
-          desc: "Allocation capitalistique fondée sur la donnée, alignant le spend sur la marge nette et l'acquisition de parts de marché.",
+          title: "Spend publicitaire orienté marge",
+          lede: "Profit, pas vanity.",
+          body: "Allocation capitalistique fondée sur la donnée, alignée sur la marge nette et l'acquisition de parts de marché.",
         },
         {
-          title: "Stratégie commerciale & analytique avancée",
-          desc: "Visibilité C-suite sur les parts de marché, share of voice, vitesse d'inventaire et modélisation de rentabilité.",
+          title: "Intelligence commerciale C-suite",
+          lede: "Clarté de boardroom.",
+          body: "Visibilité exécutive sur les parts de marché, share of voice, vitesse d'inventaire et modélisation de rentabilité.",
         },
       ],
     },
@@ -296,27 +363,32 @@ export const content = {
     process: {
       eyebrow: "Le cadre",
       headline: "Du diagnostic à la croissance composée.",
+      sub: "Des jours, pas des trimestres. Un onboarding structuré sans friction dès le premier jour.",
       ctaInline: "Lancer votre audit",
       steps: [
         {
           num: "01",
           title: "Diagnostiquer",
-          body: "Audit architectural profond de votre catalogue, efficacité media, santé d'inventaire et part de marché pour bâtir une base orientée profit.",
+          duration: "Jours 1–14",
+          body: "Audit architectural profond de votre catalogue, efficacité media, santé d'inventaire et part de marché.",
         },
         {
           num: "02",
           title: "Architecturer",
-          body: "Nous construisons votre couche opérationnelle dédiée — réalignant logistique, conformité et stratégie publicitaire autour de vos objectifs de marge.",
+          duration: "Jours 15–30",
+          body: "Construction de votre couche opérationnelle dédiée — logistique, conformité et stratégie publicitaire alignées sur la marge.",
         },
         {
           num: "03",
           title: "Exécuter",
-          body: "Lancement simultané de créatifs optimisés, campagnes search affinées et fulfillment rationalisé sous une feuille de route unifiée.",
+          duration: "Jours 31–60",
+          body: "Lancement simultané de créatifs optimisés, campagnes search affinées et fulfillment rationalisé.",
         },
         {
           num: "04",
           title: "Composer",
-          body: "Optimisation algorithmique continue, reporting hebdomadaire exécutif — vous passez de suiveur à propriétaire de catégorie.",
+          duration: "Jour 61+",
+          body: "Optimisation algorithmique continue, reporting hebdomadaire exécutif — de suiveur à propriétaire de catégorie.",
         },
       ],
     },
