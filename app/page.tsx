@@ -15,9 +15,12 @@ import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 const DIFF_IMAGES = [
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+  // Full-System Integration — laptop strategy session
+  "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop",
+  // Predictive Data Modeling — strategy notebook + charts
+  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
+  // CPG Legacy × AI — modern building windows
+  "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1200&auto=format&fit=crop",
 ];
 
 export default function Home() {
@@ -170,11 +173,6 @@ export default function Home() {
         className="max-w-6xl mx-auto px-6 py-28 text-center"
       >
         <div className="rounded-2xl border border-border bg-secondary/40 p-12 md:p-20 relative overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=2000&auto=format&fit=crop"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover opacity-[0.06]"
-          />
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute right-[-10%] top-[-20%] w-[40%] h-[40%] rounded-full bg-primary/15 blur-[120px]" />
             <div className="absolute left-[-10%] bottom-[-20%] w-[40%] h-[40%] rounded-full bg-[#C9974C]/15 blur-[120px]" />

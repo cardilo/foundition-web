@@ -65,8 +65,8 @@ export function Outcomes() {
         <div className="relative">
           <div className="relative rounded-2xl overflow-hidden border border-border shadow-xl aspect-[4/5]">
             <img
-              src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=1400&auto=format&fit=crop"
-              alt="Operational logistics infrastructure"
+              src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=1400&auto=format&fit=crop"
+              alt="Modern enterprise infrastructure"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/40 via-transparent to-transparent" />
@@ -134,8 +134,8 @@ const STEP_IMAGES = [
   "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
   // 03 Execute — team meeting
   "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop",
-  // 04 Compound — logistics warehouse aerial
-  "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=1200&auto=format&fit=crop",
+  // 04 Compound — analytics dashboard workspace
+  "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1200&auto=format&fit=crop",
 ];
 
 export function Process() {
@@ -298,8 +298,8 @@ export function DiagnosticCTA() {
     <section className="max-w-6xl mx-auto px-6 py-12">
       <div className="relative rounded-2xl overflow-hidden border border-border">
         <img
-          src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=2000&auto=format&fit=crop"
-          alt="Warehouse logistics"
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop"
+          alt="Enterprise office space"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/85 to-foreground/40" />
